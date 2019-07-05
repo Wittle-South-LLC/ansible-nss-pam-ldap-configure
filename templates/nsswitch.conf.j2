@@ -33,21 +33,14 @@
 passwd:     {{nss_pam_ldap_nss_passwd | default(["files", "ldap"]) | join(" ")}}
 shadow:     {{nss_pam_ldap_nss_shadow | default(["files", "ldap"]) | join(" ")}}
 group:      {{nss_pam_ldap_nss_group | default(["files", "ldap"]) | join(" ")}}
+gshadow:    {{nss_pam_ldap_nss_gshadow | default(["files"]) | join(" ")}}
 
 hosts:      {{nss_pam_ldap_nss_hosts | default(["files", "dns", "myhostname", "mymachines", "ldap"]) | join(" ")}}
-
-bootparams: {{nss_pam_ldap_nss_bootparams | default(["files", "ldap"]) | join(" ")}}
-
-ethers:     {{nss_pam_ldap_nss_ethers | default(["files", "ldap"]) | join(" ")}}
-netmasks:   {{nss_pam_ldap_nss_netmasks | default(["files", "ldap"]) | join(" ")}}
 networks:   {{nss_pam_ldap_nss_networks | default(["files", "ldap"]) | join(" ")}}
+
 protocols:  {{nss_pam_ldap_nss_protocols | default(["files", "ldap"]) | join(" ")}}
-rpc:        {{nss_pam_ldap_nss_rpc | default(["files", "ldap"]) | join(" ")}}
 services:   {{nss_pam_ldap_nss_services | default(["files", "ldap"]) | join(" ")}}
+ethers:     {{nss_pam_ldap_nss_ethers | default(["files", "ldap"]) | join(" ")}}
+rpc:        {{nss_pam_ldap_nss_rpc | default(["files", "ldap"]) | join(" ")}}
 
 netgroup:   {{nss_pam_ldap_nss_netgroup | default(["ldap"]) | join(" ")}}
-
-publickey:  {{nss_pam_ldap_nss_publickey | default(["files", "ldap"]) | join(" ")}}
-
-automount:  {{nss_pam_ldap_nss_automount | default(["files", "ldap"]) | join(" ")}}
-aliases:    {{nss_pam_ldap_nss_aliases | default(["files", "ldap"]) | join(" ")}}

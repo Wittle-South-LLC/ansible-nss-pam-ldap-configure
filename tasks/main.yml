@@ -20,9 +20,9 @@
     - f: nsswitch.conf
       d: /etc
       m: '0644'
-    - f: ldap
-      d: /etc/pam.d
-      m: '0600'
+#    - f: ldap
+#      d: /etc/pam.d
+#      m: '0600'
   template:
     src: '{{ item.f }}.j2'
     dest: '{{ item.d }}/{{ item.f }}'

@@ -26,5 +26,5 @@ galaxy_info:
     - nss
 
 dependencies:
-  - role: andrewrothstein.nss-pam-ldap
+  - role: ansible-nss-pam-ldap
     version: v1.0.3
